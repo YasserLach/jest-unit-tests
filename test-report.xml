@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts">
+    <testCase name="TaskManager should get all tasks" duration="3"/>
+    <testCase name="TaskManager should add a new task" duration="0"/>
+    <testCase name="TaskManager should mark a task as completed" duration="1"/>
+    <testCase name="TaskManager should return undefined when completing a non-existing task" duration="0"/>
+    <testCase name="TaskManager should update a task" duration="1"/>
+    <testCase name="TaskManager should delete a task" duration="0"/>
+    <testCase name="TaskManager should handle deleting a non-existing task" duration="1"/>
+    <testCase name="TaskManager should handle updating a non-existing task" duration="0"/>
+    <testCase name="TaskManager should get completed tasks" duration="1"/>
+    <testCase name="TaskManager should get pending tasks" duration="0"/>
+    <testCase name="TaskManager should get a task by ID" duration="1"/>
+    <testCase name="TaskManager should handle getting a non-existing task by ID" duration="0"/>
+    <testCase name="TaskManager should filter tasks by keyword (exact match)" duration="0"/>
+    <testCase name="TaskManager should filter tasks by keyword (partial match in title)" duration="1"/>
+    <testCase name="TaskManager should filter tasks by keyword (partial match in description)" duration="0"/>
+    <testCase name="TaskManager should filter tasks by keyword (no match)" duration="0"/>
+    <testCase name="TaskManager should assign a task to a user" duration="245">
+      <failure message="Error: expect(received).toEqual(expected)"><![CDATA[Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  {"id": 1, "tasks": [], "username": "TestUser"}
+Received:
+  undefined
+
+Difference:
+
+  Comparing two different types of values. Expected object but received undefined.
+    at Object.<anonymous> (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:142:97)
+    at Object.asyncFn (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\jasmine_async.js:124:345)
+    at C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:46:12
+    at new Promise (<anonymous>)
+    at mapper (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:34:499)
+    at C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:74:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testCase>
+    <testCase name="TaskManager should return undefined when assigning a task to a non-existing user" duration="0"/>
+    <testCase name="TaskManager should return undefined when assigning a non-existing task to a user" duration="0"/>
+    <testCase name="TaskManager should get tasks assigned to a user" duration="6">
+      <failure message="Error: expect(received).toEqual(expected)"><![CDATA[Error: expect(received).toEqual(expected)
+
+Expected value to equal:
+  [{"completed": false, "description": "This is a test task 1", "id": 1, "title": "Test Task 1", "user": undefined}, {"completed": false, "description": "This is a test task 2", "id": 2, "title": "Test Task 2", "user": undefined}]
+Received:
+  []
+
+Difference:
+
+- Expected
++ Received
+
+- Array [
+-   Task {
+-     "completed": false,
+-     "description": "This is a test task 1",
+-     "id": 1,
+-     "title": "Test Task 1",
+-     "user": undefined,
+-   },
+-   Task {
+-     "completed": false,
+-     "description": "This is a test task 2",
+-     "id": 2,
+-     "title": "Test Task 2",
+-     "user": undefined,
+-   },
+- ]
++ Array []
+    at Object.<anonymous> (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:179:23)
+    at Object.asyncFn (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\jasmine_async.js:124:345)
+    at C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:46:12
+    at new Promise (<anonymous>)
+    at mapper (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:34:499)
+    at C:\Users\ylach\Desktop\joao\sonar-nodejs-example\node_modules\jest-jasmine2\build\queue_runner.js:74:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testCase>
+    <testCase name="TaskManager should return an empty array when getting tasks for a non-existing user" duration="1"/>
+    <testCase name="UserManager should add a new user" duration="0"/>
+    <testCase name="UserManager should update a user" duration="0"/>
+    <testCase name="UserManager should return undefined when updating a non-existing user" duration="1"/>
+    <testCase name="UserManager should remove a user" duration="0"/>
+    <testCase name="UserManager should handle removing a non-existing user" duration="0"/>
+    <testCase name="UserManager should get all users" duration="0"/>
+    <testCase name="UserManager should get a user by ID" duration="1"/>
+    <testCase name="UserManager should handle getting a non-existing user by ID" duration="0"/>
+    <testCase name="User Routes should add a new user" duration="61"/>
+    <testCase name="User Routes should update a user" duration="21"/>
+    <testCase name="User Routes should remove a user" duration="14"/>
+    <testCase name="User Routes should get all users" duration="8">
+      <failure message="Error: expect(received).toHaveLength(length)"><![CDATA[Error: expect(received).toHaveLength(length)
+
+Expected value to have length:
+  1
+Received:
+  [{"id": 11, "tasks": [], "username": "testuser"}, {"id": 12, "tasks": [], "username": "updateduser"}]
+received.length:
+  2
+    at Object.<anonymous> (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:293:27)
+    at step (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:32:23)
+    at Object.next (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:13:53)
+    at fulfilled (C:\Users\ylach\Desktop\joao\sonar-nodejs-example\tests\index.test.ts:4:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)]]></failure>
+    </testCase>
+    <testCase name="User Routes should get a user by ID" duration="11"/>
+  </file>
+</testExecutions>
